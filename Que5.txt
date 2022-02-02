@@ -1,0 +1,68 @@
+Question 5: 
+	- Write a Java program to find the sum of two arrays elements?
+		array1[] = {10, 20, 30, 40, 50};  // Take values form Keyboard
+		array2[] = {9, 18, 27, 36, 45};	 //  Take Values form keyboard
+
+Program :
+import java.util.Scanner;
+
+public class SumOfArrayElements 
+{
+  public static void main(String []args)
+  {
+	  Scanner sc = new Scanner(System.in);
+	  System.out.println("Enter the size of the Array:");
+	  int arraySize = sc.nextInt();
+	  int []array1 = new int[arraySize];
+	  int []array2 = new int[arraySize];
+	  int []array3 = new int[arraySize];
+	  System.out.println("Enter the Elements in First Array: ");
+	  for(int i = 0; i<arraySize; i++)
+	  {
+		  array1[i] = sc.nextInt();
+	  }
+	  System.out.println("Enter the Elements in Second Array: ");
+	  for(int i = 0; i<arraySize; i++)
+	  {
+		  array2[i] = sc.nextInt();
+	  }System.out.println();
+	  System.out.print("Elements in First Array: ");
+	  for(int i = 0; i<arraySize; i++)
+	  {
+		  System.out.print(array1[i]+" ");
+	  }
+	  System.out.println();
+	  System.out.print("Elements in Second Array: ");
+	  for(int i = 0; i<arraySize; i++)
+	  {
+		  System.out.print(array2[i]+" ");
+	  }
+	  System.out.println();
+	  System.out.print("Sum of elements of Array1 & Array2 is: ");
+	  for(int i = 0; i<arraySize; i++)
+	  {
+		  array3[i] = array1[i] + array2[i];
+		  System.out.print(array3[i]+" ");
+	  }
+  }
+}
+
+Output :
+Enter the size of the Array:
+5
+Enter the Elements in First Array: 
+1
+2
+3
+4
+5
+Enter the Elements in Second Array: 
+1
+2
+3
+4
+5
+
+Elements in First Array: 1 2 3 4 5 
+Elements in Second Array: 1 2 3 4 5 
+Sum of elements of Array1 & Array2 is: 2 4 6 8 10 

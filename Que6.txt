@@ -1,0 +1,60 @@
+Qeustion 6: Write a program in Java to Count Repeated Elements in Array?
+
+		Example1- an unsorted array,
+		Array = { 50, 20, 10, 40, 20, 10, 10, 60, 30, 70 };
+		Total Repeated elements: 2
+		Repeated elements are: 20 10
+
+Program :
+
+import java.util.Scanner;
+public class RepeatedElements 
+{
+  public static void main(String [] args)
+  {
+      int arraySize,i, j, repetedElementNo=0;
+      Scanner sc = new Scanner(System.in); 
+      System.out.println("Enter how many numbers you want in array:");
+      arraySize = sc.nextInt();
+      int []arrNumber = new int [arraySize];
+      System.out.println("Enter Numbers in Array:");
+      for(i=0; i<arraySize;i++)
+      {
+      arrNumber[i] = sc.nextInt();
+      }
+      System.out.print("Entered Elements in array are: ");
+      for(i=0; i<arrNumber.length;i++)
+      {
+	   System.out.print(arrNumber[i]);
+      }
+      System.out.println();
+      System.out.println("Repeated Elements in given Array are: ");
+      for(i=0; i<arrNumber.length; i++)
+        {
+	   for(j = i+1; j< arrNumber.length;j++ )
+	   {
+	   if(arrNumber[i]==arrNumber[j])
+	   {
+		System.out.print(arrNumber[j]+" ");
+	        repetedElementNo++;
+	   }
+	   }
+	}
+      System.out.println();
+      System.out.println("Total Repeted Elements Are:"+repetedElementNo);
+  }
+}
+Output:
+
+Enter how many numbers you want in array:
+5
+Enter Numbers in Array:
+1
+2
+3
+2
+1
+Entered Elements in array are: 12321
+Repeated Elements in given Array are: 
+1 2 
+Total Repeted Elements Are:2

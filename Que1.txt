@@ -1,0 +1,74 @@
+Question 1: Follow naming convention rule
+ 
+	- Take 20 integer inputs from user and print the following:
+	- number of positive numbers
+	- number of negative numbers
+	- number of odd numbers
+	- number of even numbers
+	- number of 0s.
+Program:
+
+import java.util.Scanner;
+public class Numbers 
+{
+	public static void main(String[] args) 
+	{
+        int positiveNum=0, negativeNum=0, evenNum=0, oddNum=0, zeroNum=0;
+        int arrNumber[] = new int[20];
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter 20 Integers: ");
+		for(int i=0; i<20; i++)
+		{
+			arrNumber[i] = sc.nextInt();
+		}
+		for(int i=0; i<20; i++)
+		{
+		if(arrNumber[i]>0)
+		    positiveNum++;
+		else if(arrNumber[i]<0)
+                   negativeNum++;
+                else 
+                   zeroNum++;
+		}
+		for(int i=0; i<20; i++)
+		{
+		if(arrNumber[i]%2==0)
+	          evenNum++;
+		else
+		  oddNum++;
+		}
+		System.out.println("Number of Positive Integers are : "+positiveNum);
+		System.out.println("Number of Negative Integers are : "+negativeNum);
+		System.out.println("Number of Even Integers are : "+evenNum);
+		System.out.println("Number of odd Integers are : "+oddNum);
+		System.out.println("Number of 0s Integers are : "+zeroNum);
+	}
+}
+
+Output : 
+Enter 20 Integers: 
+2
+5
+4
+3
+6
+0
+-1
+-5
+6
+-8
+-15
+56
+45
+3
+8
+0
+-4
+-8
+-6
+4
+Number of Positive Integers are : 11
+Number of Negative Integers are : 7
+Number of Even Integers are : 13
+Number of odd Integers are : 7
+Number of 0s Integers are : 2
